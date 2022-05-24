@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.fleatmanagmentsystem">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+
+            <data android:mimeType="image/*" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.PICK" />
+
+            <data android:mimeType="image/*" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.CHOOSER" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".di.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_fruisce"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_fruisce"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme"
+        tools:ignore="AllowBackup">
+        <activity
+            android:name=".screens.user.lrpod.LrPodActivity"
+            android:exported="false" />
+        <activity android:name=".screens.user.URLActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".screens.user.driver.shipment_exceuption.ShipmentExecutionActivity" />
+        <activity android:name=".screens.user.driver.advance_expenses.ExpensesHistoryActivity" />
+        <activity android:name=".screens.user.driver.trips.TripDetailsActivity" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+        <activity android:name=".screens.user.driver.DriverFeaturesActivity" />
+        <activity android:name=".screens.user.driver.DriverDetailsActivity" />
+        <activity android:name=".screens.user.LoginActivity"></activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.fleatmanagmentsystem.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

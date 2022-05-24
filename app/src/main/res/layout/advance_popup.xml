@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/ten_dp"
+    android:orientation="vertical"
+    tools:context=".screens.user.driver.DriverDetailsActivity">
+
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="@dimen/five_dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/five_dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_weight="1.99"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/advance"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/twenty_dp" />
+
+                <ImageView
+                    android:id="@+id/closeAdvance"
+                    android:layout_width="@dimen/thirty_dp"
+                    android:layout_height="@dimen/thirty_dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/ten_dp"
+                    android:src="@drawable/ic_baseline_close_24" />
+
+            </LinearLayout>
+
+
+
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="@string/trip_id"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:textSize="@dimen/fifteen_dp"
+                            android:editable="false"
+                            android:id="@+id/tripId"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_border_gray"
+                            android:padding="@dimen/five_dp"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="@string/petro_card"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:textSize="@dimen/fifteen_dp"
+                            android:editable="false"
+                            android:padding="@dimen/five_dp"
+                            android:id="@+id/petroCard"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_border_gray"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="@string/fastag"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:textSize="@dimen/fifteen_dp"
+                            android:editable="false"
+                            android:padding="@dimen/five_dp"
+                            android:id="@+id/fasTag"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_border_gray"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="@string/cash_bank"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:textSize="@dimen/fifteen_dp"
+                            android:editable="false"
+                            android:padding="@dimen/five_dp"
+                            android:id="@+id/cashBank"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_border_gray"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="@string/tax_card"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:textSize="@dimen/fifteen_dp"
+                            android:editable="false"
+                            android:padding="@dimen/five_dp"
+                            android:id="@+id/advanceTaxCard"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_border_gray"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="@string/balance"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:textSize="@dimen/fifteen_dp"
+                            android:editable="false"
+                            android:padding="@dimen/five_dp"
+                            android:id="@+id/advanceBalance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_border_gray"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="@string/total_advance"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:textSize="@dimen/fifteen_dp"
+                            android:editable="false"
+                            android:padding="@dimen/five_dp"
+                            android:id="@+id/totalAdvance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_border_gray"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:text="@string/create_date_time"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:textSize="@dimen/fifteen_dp"
+                            android:editable="false"
+                            android:padding="@dimen/five_dp"
+                            android:id="@+id/createDateTime"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/round_border_gray"
+                            android:hint="@string/cap_from_mob"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
+

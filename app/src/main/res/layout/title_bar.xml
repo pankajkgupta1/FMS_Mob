@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/icon_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/textViewBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/twenty_dp"
+            android:gravity="center"
+            android:text="@string/fms"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".screens.user.driver.vehicle.VehicleTakeoverHandoverFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/title"
+            android:background="@color/purple_200"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/twenty_dp" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_margin="@dimen/five_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioGroup
+                        android:layout_marginLeft="@dimen/twenty_dp"
+                        android:layout_marginRight="@dimen/twenty_dp"
+                        android:gravity="center"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/takeover"
+                            android:layout_weight="1"
+                            android:text="@string/takeover"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                        <RadioButton
+                            android:id="@+id/handover"
+                            android:layout_weight="1"
+                            android:text="@string/handover"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:weightSum="4"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:weightSum="4"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/txtTrip"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:layout_marginRight="@dimen/five_dp"
+                            android:gravity="center_vertical"
+                            android:layout_weight="0.7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="@string/trip_id" />
+                        <LinearLayout
+                            android:layout_weight="1.3"
+                            android:background="@color/purple_200"
+                            android:gravity="left"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <Spinner
+                                android:textSize="@dimen/fifteen_dp"
+                                android:gravity="left"
+                                android:layout_margin="@dimen/five_dp"
+                                android:id="@+id/spinnerTripsIds"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/txtLoad"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="@dimen/five_dp"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:gravity="center_vertical"
+                            android:layout_weight="0.7"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="@string/load_id" />
+                        <LinearLayout
+                            android:layout_weight="1.3"
+                            android:background="@color/purple_200"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <Spinner
+                                android:gravity="center"
+                                android:layout_margin="@dimen/five_dp"
+                                android:id="@+id/spinnerTripsLoads"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:weightSum="4"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/fuel" />
+                    <ImageView
+                        android:id="@+id/fuelCam"
+                        android:src="@drawable/ic_camera_alt_24"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:id="@+id/fuelCheck"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:background="@drawable/round_gray_background"
+                        android:id="@+id/fuelImg"
+                        android:textColor="@color/black"
+                        android:padding="@dimen/five_dp"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/ten_dp"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/hundred_dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:weightSum="4"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/speedometer" />
+                    <ImageView
+                        android:id="@+id/speedometerCam"
+                        android:src="@drawable/ic_camera_alt_24"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:id="@+id/speedometerCheck"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:background="@drawable/round_gray_background"
+                        android:id="@+id/speedometerImg"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:padding="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/hundred_dp"
+                        android:text="XXXXXX" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:weightSum="4"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/front_vehicle_lights" />
+                    <ImageView
+                        android:id="@+id/vehicleLightsCam"
+                        android:src="@drawable/ic_camera_alt_24"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:id="@+id/vehicleLightsCheck"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:background="@drawable/round_gray_background"
+                        android:id="@+id/vehicleLightsImg"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:padding="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/hundred_dp"
+                        android:text="XXXXXX" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:weightSum="4"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/back_vehicle_lights" />
+                    <ImageView
+                        android:id="@+id/vehicleBackLightsCam"
+                        android:src="@drawable/ic_camera_alt_24"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:id="@+id/vehicleBackLightsCheck"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:background="@drawable/round_gray_background"
+                        android:id="@+id/vehicleBackLightsImg"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:padding="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/hundred_dp"
+                        android:text="XXXXXX" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:weightSum="4"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/tire_details" />
+                    <ImageView
+                        android:id="@+id/tireCam"
+                        android:src="@drawable/ic_camera_alt_24"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:id="@+id/tireCheck"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:background="@drawable/round_gray_background"
+                        android:id="@+id/tireImg"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:padding="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/hundred_dp"
+                        android:text="XXXXXX" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:weightSum="4"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/side_view_both" />
+                    <ImageView
+                        android:id="@+id/sideViewCam"
+                        android:src="@drawable/ic_camera_alt_24"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight=".4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <ImageView
+                        android:id="@+id/sideViewCheck"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="0.4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"/>
+                    <ImageView
+                        android:background="@drawable/round_gray_background"
+                        android:id="@+id/sideViewImg"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:layout_marginLeft="@dimen/five_dp"
+                        android:padding="@dimen/five_dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1.6"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/hundred_dp"
+                        android:text="XXXXXX" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="@dimen/five_dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:textColor="@color/white"
+                        android:id="@+id/ok"
+                        android:text="@string/ok"
+                        android:background="@color/purple_200"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/forty_dp"/>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+    </LinearLayout>
+</layout>

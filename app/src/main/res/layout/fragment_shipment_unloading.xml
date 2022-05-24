@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".screens.user.driver.shipment_exceuption.ShipmentUnloadingFragment">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/ten_dp"
+            android:weightSum="4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:layout_marginRight="@dimen/five_dp"
+                android:gravity="center_vertical"
+                android:layout_weight="0.7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/trip_id" />
+            <LinearLayout
+                android:layout_weight="1.3"
+                android:background="@color/purple_200"
+                android:gravity="left"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:gravity="left"
+                    android:layout_margin="@dimen/five_dp"
+                    android:id="@+id/spinnerTripsIds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <TextView
+                android:textColor="@color/black"
+                android:layout_marginLeft="@dimen/five_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:gravity="center_vertical"
+                android:layout_weight="0.7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/load_id" />
+            <LinearLayout
+                android:layout_weight="1.3"
+                android:background="@color/purple_200"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <Spinner
+                    android:gravity="center"
+                    android:layout_margin="@dimen/five_dp"
+                    android:id="@+id/spinnerTripsLoads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginRight="@dimen/five_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="@dimen/ten_dp"
+                android:layout_margin="@dimen/ten_dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/kmUnloading"
+                android:text="@string/km_at_unloading"
+                android:textAllCaps="false"
+                android:background="@drawable/round_light_brown_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="@dimen/ten_dp"
+                android:layout_margin="@dimen/ten_dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/unloadingEnd"
+                android:text="@string/unloading_ended"
+                android:textAllCaps="false"
+                android:background="@drawable/round_light_brown_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="@dimen/ten_dp"
+                android:layout_margin="@dimen/ten_dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/kmGateout"
+                android:text="@string/km_at_gateout"
+                android:textAllCaps="false"
+                android:background="@drawable/round_light_brown_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginRight="@dimen/five_dp"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="@dimen/ten_dp"
+                android:layout_margin="@dimen/ten_dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/unloadingGate"
+                android:text="@string/at_unloading_gate"
+                android:textAllCaps="false"
+                android:background="@drawable/round_light_brown_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="@dimen/ten_dp"
+                android:layout_margin="@dimen/ten_dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/dopReceived"
+                android:text="POD Received"
+                android:textAllCaps="false"
+                android:background="@drawable/round_light_brown_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="@dimen/ten_dp"
+                android:layout_margin="@dimen/ten_dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/settlement"
+                android:text="@string/settlement"
+                android:textAllCaps="false"
+                android:background="@drawable/round_light_brown_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginRight="@dimen/five_dp"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="@dimen/ten_dp"
+                android:layout_margin="@dimen/ten_dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/unloadingStarts"
+                android:text="@string/unloading_started"
+                android:textAllCaps="false"
+                android:background="@drawable/round_light_brown_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="@dimen/ten_dp"
+                android:layout_margin="@dimen/ten_dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/unloadingGateOut"
+                android:text="@string/unloading_gateout"
+                android:textAllCaps="false"
+                android:background="@drawable/round_light_brown_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:visibility="invisible"
+                app:cardCornerRadius="@dimen/ten_dp"
+                android:layout_margin="@dimen/ten_dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+            <Button
+                android:visibility="invisible"
+                android:background="@drawable/round_light_brown_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

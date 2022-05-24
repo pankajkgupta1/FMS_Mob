@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.user.lrpod.LrpodShipperFragment">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/ten_dp"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:layout_marginRight="@dimen/five_dp"
+            android:gravity="center_vertical"
+            android:layout_weight="0.7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/trip_id" />
+        <LinearLayout
+            android:layout_weight="1.3"
+            android:background="@color/purple_200"
+            android:gravity="left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:gravity="left"
+                android:layout_margin="@dimen/five_dp"
+                android:id="@+id/spinnerTripsIds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginLeft="@dimen/five_dp"
+            android:layout_marginTop="@dimen/five_dp"
+            android:gravity="center_vertical"
+            android:layout_weight="0.7"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/load_id" />
+        <LinearLayout
+            android:layout_weight="1.3"
+            android:background="@color/purple_200"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <Spinner
+                android:gravity="center"
+                android:layout_margin="@dimen/five_dp"
+                android:id="@+id/spinnerTripsLoads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

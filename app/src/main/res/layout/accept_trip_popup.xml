@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_margin="@dimen/twenty_dp"
+    android:orientation="vertical"
+    android:background="@color/light_brown"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:textSize="@dimen/twenty_dp"
+        android:id="@+id/accept_trip"
+        android:layout_marginTop="@dimen/twenty_dp"
+        android:layout_marginBottom="@dimen/twenty_dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="@string/accept_for_trip_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/kilometerGate"
+        android:inputType="number"
+        android:layout_marginLeft="@dimen/twenty_dp"
+        android:layout_marginRight="@dimen/twenty_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/kilometerUnload"
+        android:inputType="number"
+        android:layout_marginLeft="@dimen/twenty_dp"
+        android:layout_marginRight="@dimen/twenty_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/fifteen_dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="@dimen/ten_dp"
+            android:elevation="@dimen/one_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:background="@color/purple_200"
+                android:textColor="@color/white"
+                android:text="@string/yes"
+                android:id="@+id/tripYes"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/forty_dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="@dimen/ten_dp"
+            android:elevation="@dimen/one_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:background="@color/purple_200"
+                android:textColor="@color/white"
+                android:text="@string/no"
+                android:id="@+id/tripNo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/forty_dp"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>
